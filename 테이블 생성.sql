@@ -6,8 +6,8 @@ CREATE TABLE studentTBL(
     rsvs_cnt INTEGER not null,
     loan_cnt INTEGER not null,
     stop_date VARCHAR(8) not null,
-    insert_time timestamp default current_timestamp not null,
-    update_time timestamp default current_timestamp not null
+    insert_time timestamp default current_timestamp,
+    update_time timestamp default current_timestamp
 );
 
 CREATE TABLE bookTBL(
@@ -18,8 +18,8 @@ CREATE TABLE bookTBL(
     pay_date VARCHAR(8) not null,
     rsvs_people INTEGER not null,
     loan_yn CHAR(1) not null,
-    insert_time timestamp default current_timestamp not null,
-    update_time timestamp default current_timestamp not null
+    insert_time timestamp default current_timestamp,
+    update_time timestamp default current_timestamp
 );
 
 
@@ -31,11 +31,9 @@ CREATE TABLE loanTBL(
     book_no INTEGER not null,
     return_date VARCHAR(8) not null,
     return_yn CHAR(1) not null,
-    insert_time timestamp default current_timestamp not null,
-    update_time timestamp default current_timestamp not null
+    insert_time timestamp default current_timestamp ,
+    update_time timestamp default current_timestamp
 );
-
-DROP TABLE rsvsTBL;
 
 CREATE TABLE rsvsTBL(
 	seq INTEGER auto_increment primary key,
@@ -43,8 +41,8 @@ CREATE TABLE rsvsTBL(
     std_no INTEGER not null,
     book_no INTEGER not null,
     rsvs_yn VARCHAR(1) not null,
-    insert_time timestamp default current_timestamp not null,
-    update_time timestamp default current_timestamp not null
+    insert_time timestamp default current_timestamp,
+    update_time timestamp default current_timestamp
 );
 
 desc studentTBL;
